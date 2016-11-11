@@ -1,3 +1,11 @@
+=====
+TODOs
+=====
+
+- If `etc/hosts`_ resolves the same hostname to multiple IP addresses, normally, **only** the first should be returned. This is probably not the case since the code later on crashes inside a `designate-central`_ 's script, when resolving it (a function like `aton`_ ) with a `SyntaxError`_ instead of something more explanatory or a custom exception. Why not even smartly avoiding the problem?
+
+- The yaml file can only use IPs and hostnames are not resolved later on by rndc.
+
 ===================
 OpenStack Designate
 ===================
