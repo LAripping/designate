@@ -2,9 +2,11 @@
 TODOs
 =====
 
-- If `etc/hosts`_ resolves the same hostname to multiple IP addresses, normally, **only** the first should be returned. This is probably not the case since the code later on crashes inside a `designate-central`_ 's script, when resolving it (a function like `aton`_ ) with a `SyntaxError`_ instead of something more explanatory or a custom exception. Why not even smartly avoiding the problem?
+- If ``/etc/hosts`` resolves the same hostname to multiple IP addresses, normally, **only** the first should be returned. This is probably not the case since the code later on crashes inside a ``designate-central``'s script, when resolving it (a function like ``aton``) with a ``SyntaxError`` instead of something more explanatory or a custom exception. Why not even smartly avoiding the problem?
 
-- The yaml file can only use IPs and hostnames are not resolved later on by rndc.
+- The ``pools.yaml`` file can only use IPs and hostnames are not resolved later on by rndc.
+
+- rndc package is not a dependency! Pointers for it's configs exist, the commands to run are specified but the *bind9utils*  package is nowhere listed to be installed
 
 ===================
 OpenStack Designate
